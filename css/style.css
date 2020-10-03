@@ -17,6 +17,15 @@ section {
     --light-black: #2e2c2caf;
     --bggradient: linear-gradient(to right, #dfabd8, #8221d1);
     --light-gray: rgba(255, 255, 255, 0.877);
+    --goldgradient: linear-gradient(to right,
+        #462523 0,
+        #cb9b51 22%,
+        #f6e27a 45%,
+        #f6f2c0 50%,
+        #f6e27a 55%,
+        #cb9b51 78%,
+        #462523 100%);
+    ;
 }
 
 header a {
@@ -49,6 +58,7 @@ header .nav-item {
 header .navbar-brand {
     padding-left: 3em;
     padding-top: 0.6em;
+    padding-right: 1em;
 }
 
 header .nav-link:hover {
@@ -66,10 +76,16 @@ header .row .col-md-5 {
 
 header .row .col-md-5 img {
     width: 90%;
+    border: whitesmoke;
+    border-style: solid;
+    border-width: 10px;
+    box-shadow: 10px 10px 8px #252525;
+    margin-top: 2em;
+    ;
 }
 
 header {
-    background: #ff512f;
+    background: #dfabd8;
     /* fallback for old browsers */
     background: var(--bggradient);
 }
@@ -91,6 +107,8 @@ header .container .col-md-7 h1 {
 
 header .container .col-md-7 p {
     padding: 1vmin 5vmin;
+    text-align: center;
+    word-wrap: break-word;
 }
 
 .primary-btn {
@@ -138,14 +156,14 @@ header .container .col-md-7 p {
     color: rgba(0, 0, 0, 0.5);
 }
 
-/*  Section 2  */
+/********** section 2 **************/
 
 .cover {
     width: 100%;
-    height: 55vmin;
-    background: url("../assets/pexels-photo-452738.jpeg");
-    background-position: -24rem -19rem;
-    background-size: 150%;
+    height: 50vmin;
+    background: url("../assets/UCIsign.jpg");
+    background-position: center;
+    background-size: cover;
     position: relative;
 }
 
@@ -161,14 +179,17 @@ header .container .col-md-7 p {
 .cover .content {
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    padding-top: 19vmin;
+    background: rgba(0, 0, 0, 0.4);
+    padding-top: 20vmin;
 }
 
-.cover .content>h1 {
+#d {
     font-family: var(--Patua);
-    font-size: 6vmin;
-    color: whitesmoke;
+    font-size: 70px;
+    letter-spacing: 5px;
+    background-image: var(--goldgradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .cover .content>p {
@@ -180,13 +201,13 @@ header .container .col-md-7 p {
 .numbers .rect {
     position: relative;
     z-index: 1;
-    background: white;
+    background:#2e2c2caf;
     width: 17rem;
     height: 12rem;
     padding-top: 3.5vmin;
     margin: 1rem;
     border-radius: 0.5em;
-    box-shadow: 1px 2px 50px 0px rgba(255, 0, 0, 0.349);
+    box-shadow: 1px 2px 50px 0px rgba(255, 215, 0, 0.349);
 }
 
 .numbers {
@@ -194,12 +215,22 @@ header .container .col-md-7 p {
 }
 
 .numbers .rect h1 {
-    font-size: 5rem;
-    color: tomato;
+    color: transparent;
+    letter-spacing: 2px;
+    font-size: 72px;
+    font-weight: bold;
+    background-image: var(--goldgradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
 }
 
 .numbers .rect>p {
     font-family: var(--Patua);
+    font-size: 24px;
+    background: var(--goldgradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
 }
 
 .purchase>h1 {
@@ -237,16 +268,16 @@ header .container .col-md-7 p {
 
 .card-body .pricing {
     background: rgba(208, 241, 241, 0.199);
-    border-top-right-radius: 170px;
-    border-top-left-radius: 170px;
+    border-top-right-radius: 150px;
+    border-top-left-radius: 150px;
 }
 
 .card-body .pricing>h1 {
-    font-size: 10vmin;
+    font-size: 8vmin;
     padding: 1em 0.5em;
 }
 
-/* Section 3 */
+/********** section 3 **************/
 
 .section-3 {
     height: 70vmin;
@@ -283,37 +314,33 @@ header .container .col-md-7 p {
     font-size: 2vmin;
 }
 
-/* Section Team */
+/* Section 4 */
 
 .section-4 .container h1 {
     font-size: 6vmin;
     padding-top: 14vmin;
 }
 
-.section-4 .team {
-    padding: 10vmin 4vmin;
+/*
+Removes white gap between slides - change to base color of slide images
+*/
+.carousel {
+    background: #007aeb;
 }
 
-.section-4 .card {
-    width: 22em;
-    margin-top: 10vmin;
+/*
+Forces image to be 100% width and not max width of 100%
+*/
+.carousel-item .img-fluid {
+    width: 100%;
 }
 
-.section-4 .card .card-text {
-    padding: 0.5em;
-}
-
-.section-4 .card-body>a {
-    font-size: 1.5em;
-}
-
-.section-4 .carousel-item {
-    padding-left: 3rem;
-}
-
-.border-radius {
-    border-radius: 340px;
-    width: 60%;
+/* 
+anchors are inline so you need ot make them block to go full width
+*/
+.carousel-item a {
+    display: block;
+    width: 100%;
 }
 
 footer {
@@ -353,7 +380,42 @@ footer .column i+i {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.815);
+    background: rgba(0, 0, 0, 0.65);
     z-index: 9999;
     transition: all 1.5s ease;
+}
+
+/* Moving Letters from Tobias Ahlin Bjerrome */
+
+.ml2 {
+    font-weight: 900;
+    font-size: 3.5em;
+}
+
+.ml2 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+.ml10 {
+    position: relative;
+    font-weight: 700;
+    font-size: 1em;
+    word-spacing: 6px;
+    overflow-wrap: break-word;
+}
+
+.ml10 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+}
+
+.ml10 .letter2 {
+    display: inline-block;
+    line-height: 1em;
+    transform-origin: 0 0;
 }
