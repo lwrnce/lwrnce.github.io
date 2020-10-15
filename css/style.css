@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Poiret+One");
+@import url("https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Poiret+One|Roboto");
 
 * {
     box-sizing: border-box;
@@ -14,8 +14,9 @@ section {
     --Rubik: "Rubik", cursive;
     --Patua: "Patua One", cursive;
     --Lobster: "lobster", cursive;
+    --Roboto: "Roboto", cursive;
     --light-black: #2e2c2caf;
-    --bggradient: linear-gradient(to right, #dfabd8, #8221d1);
+    --bggradient: linear-gradient(45DEG, #ffcce7, #81b7d2, #4d5198);
     --light-gray: rgba(255, 255, 255, 0.877);
     --goldgradient: linear-gradient(to right,
         #462523 0,
@@ -25,15 +26,9 @@ section {
         #f6e27a 55%,
         #cb9b51 78%,
         #462523 100%);
-    --azur: #7F7FD5;
-    /* fallback for old browsers */
-    --azur: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
-    /* Chrome 10-25, Safari 5.1-6 */
-    --azur: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: #a8ff78;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #78ffd6, #a8ff78); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    --azur: linear-gradient(to right, #44d3c9, #3d70cf, #3636b9);
+    --smboxgradient: linear-gradient(45deg, #6096fd, #aab6fb, #fb7bbe, #faa7bb);
+
 }
 
 header a {
@@ -73,6 +68,45 @@ header .nav-link:hover {
     color: black;
 }
 
+/*Dropdown Contacts*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    right: 0;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: black;
+    font-size: 12px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: inline-block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/*Dropdown Contact End*/
+
 header .row .col-md-7 {
     padding: 22vmin 1vmin;
     padding-bottom: 35vmin;
@@ -95,13 +129,12 @@ header .row .col-md-5 img {
 
 header .smbox {
     box-sizing: border-box;
-    position: absolute;
+    position: relative;
     display: inline-flex;
     padding: 10px 0px 0px 18px;
-    background: var(--light-gray);
+    background: var(--smboxgradient);
     border-radius: 40px;
     overflow-x: hidden;
-    left: 35%;
     cursor: pointer;
 }
 
@@ -113,8 +146,8 @@ header .smbox {
     bottom: 0;
     right: 0;
     z-index: -1;
-    height: 60px;
-    width: 200px;
+    height: 200px;
+    width: 190px;
     background: var(--azur);
     transition: transform 700ms ease-in-out;
     transform: scaleX(0);
@@ -141,8 +174,8 @@ header .smbox {
 .sm {
     display: none;
     list-style-type: none;
-    padding: 0px 12px 5px 12px;
-    margin: 0px 5px 0px 15px;
+    padding: 0px 0 5px 12px;
+    margin: 0px 25px 0px -25px;
 }
 
 .smbox:hover .social {
@@ -154,6 +187,38 @@ header .smbox {
     display: inline-flex;
     position: relative;
     font-size: 20px;
+}
+
+.smlink {
+    margin-left: 15px;
+}
+
+.fa-facebook:hover {
+    background: linear-gradient(45deg, #fbeee6, #ffe5d8, #ffcad4, #f3abb6);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.fa-github:hover {
+    background: linear-gradient(45deg, #6096fd, #aab6fb, #fb7bbe, #faa7bb);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.fa-instagram:hover {
+    background: linear-gradient(45deg, #eca960, #e68f6f, #da566a, #ca5081, #c01f8d);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.fa-linkedin:hover {
+    background: linear-gradient(45deg, #56c596, #7be495, #cff4d2);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 /**Social Media links*/
@@ -262,7 +327,7 @@ header .container .col-md-7 p {
 }
 
 .cover .content>p {
-    font-family: var(--Rubik);
+    font-family: var(--Patua);
     font-size: 2vmin;
     color: #e5e5e5;
 }
@@ -302,10 +367,25 @@ header .container .col-md-7 p {
     -webkit-text-fill-color: transparent; 
 }
 
+.edubox {
+    position: relative;
+    z-index: 1;
+    background:#2e2c2caf;
+    width: fit-content;
+    padding: 1em;
+    padding-top: 3.5vmin;
+    margin: 1rem;
+    border-radius: 0.5em;
+    box-shadow: 1px 2px 50px 0px rgba(255, 215, 0, 0.349);
+    font-family: var(--Patua);
+    font-size: 18px;
+    color: whitesmoke;
+}
+
 .purchase>h1 {
     padding-top: 15vmin;
     padding-bottom: 0.1em;
-    font-family: var(--Lobster);
+    font-family: var(--Patua);
 }
 
 .purchase>p {
@@ -326,24 +406,13 @@ header .container .col-md-7 p {
 
 .cards .title {
     background: rgba(208, 241, 241, 0.199);
-    padding: 1.4em 2.5em;
+    padding: 1.4em 1em;
     font-size: 2vmin;
 }
 
 .card .card-text {
     padding: 2.5rem 3rem;
     color: var(--light-black);
-}
-
-.card-body .pricing {
-    background: rgba(208, 241, 241, 0.199);
-    border-top-right-radius: 150px;
-    border-top-left-radius: 150px;
-}
-
-.card-body .pricing>h1 {
-    font-size: 8vmin;
-    padding: 1em 0.5em;
 }
 
 /********** section 3 **************/
@@ -370,6 +439,7 @@ header .container .col-md-7 p {
 .section-3 .desktop {
     background: white;
     display: inline-block;
+    width: 300px;
     border-radius: 3em;
     padding: 2vmin 4.5vmin;
     margin: 1em;
@@ -382,6 +452,31 @@ header .container .col-md-7 p {
 .section-3 .desktop p {
     font-size: 2vmin;
 }
+
+.section-3 a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Resume Modal*/
+
+.iframe-container {
+    padding-bottom: 60%;
+    padding-top: 50%;
+    overflow: hidden;
+}
+
+.iframe-container iframe,
+.iframe-container object,
+.iframe-container embed {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 250%;
+    height: 100%;
+}
+
+/* End Resume Modal*/
 
 /* Section 4 */
 
