@@ -405,14 +405,12 @@ header .container .col-md-7 p {
 }
 
 .cards .title {
-    background: rgba(208, 241, 241, 0.199);
     padding: 1.4em 1em;
     font-size: 2vmin;
 }
 
 .card .card-text {
-    padding: 2.5rem 3rem;
-    color: var(--light-black);
+    padding: 1rem 2rem;
 }
 
 /********** section 3 **************/
