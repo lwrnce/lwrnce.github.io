@@ -4,11 +4,6 @@
     box-sizing: border-box;
 }
 
-header,
-section {
-    overflow-x: hidden;
-}
-
 :root {
     --Poiret-font: "Poiret One", cursive;
     --Rubik: "Rubik", cursive;
@@ -17,6 +12,8 @@ section {
     --Roboto: "Roboto", cursive;
     --light-black: #2e2c2caf;
     --bggradient: linear-gradient(45DEG, #ffcce7, #81b7d2, #4d5198);
+    --reversebg: linear-gradient(-45DEG, #4d5198, #81b7d2, #ffcce7);
+    --calmgreen: linear-gradient(45DEG, #f6eeab, #c9dd94, #9dcf94, #7ec796, #5ebd96, #11a797);
     --light-gray: rgba(255, 255, 255, 0.877);
     --goldgradient: linear-gradient(to right,
         #462523 0,
@@ -28,7 +25,11 @@ section {
         #462523 100%);
     --azur: linear-gradient(to right, #44d3c9, #3d70cf, #3636b9);
     --smboxgradient: linear-gradient(45deg, #6096fd, #aab6fb, #fb7bbe, #faa7bb);
+}
 
+header,
+section {
+    overflow-x: hidden;
 }
 
 header a {
@@ -117,7 +118,10 @@ header .row .col-md-5 {
 }
 
 header .row .col-md-5 img {
-    width: 90%;
+    height: auto;
+    width: auto;
+    max-height: 80%;
+    max-width: 80%;
     border: whitesmoke;
     border-style: solid;
     border-width: 10px;
@@ -254,6 +258,7 @@ header .container .col-md-7 p {
 
 .section-1 {
     padding: 20vmin 0vmin;
+    background: var(--reversebg);
 }
 
 .section-1 .row .col-md-6 .pray img {
@@ -289,6 +294,14 @@ header .container .col-md-7 p {
     font-size: 0.9em;
     color: rgba(0, 0, 0, 0.5);
 }
+
+/* Section 2 START*/
+
+.section-2 {
+    background: var(--bggradient);
+}
+
+/* Section 2 END*/
 
 footer {
     background: rgba(0, 0, 0, 0.815);
