@@ -12,7 +12,7 @@
     --Roboto: "Roboto", cursive;
     --light-black: #2e2c2caf;
     --bggradient: linear-gradient(45DEG, #ffcce7, #81b7d2, #4d5198);
-    --reversebg: linear-gradient(-45DEG, #4d5198, #81b7d2, #ffcce7);
+    --reversebg: linear-gradient(45DEG, #4d5198, #81b7d2, #ffcce7);
     --calmgreen: linear-gradient(45DEG, #f6eeab, #c9dd94, #9dcf94, #7ec796, #5ebd96, #11a797);
     --light-gray: rgba(255, 255, 255, 0.877);
     --goldgradient: linear-gradient(to right,
@@ -27,10 +27,7 @@
     --smboxgradient: linear-gradient(45deg, #6096fd, #aab6fb, #fb7bbe, #faa7bb);
 }
 
-header,
-section {
-    overflow-x: hidden;
-}
+
 
 header a {
     font-family: var(--Poiret-font);
@@ -108,16 +105,22 @@ header .nav-link:hover {
 
 /*Dropdown Contact End*/
 
-header .row .col-md-7 {
+.section-0 {
+    background-image: url(../assets/sakuratree.png);
+    background-position: center center;
+    background-size: cover;
+}
+
+.section-0 .row .col-md-7 {
     padding: 22vmin 1vmin;
     padding-bottom: 35vmin;
 }
 
-header .row .col-md-5 {
+.section-0 .row .col-md-5 {
     padding: 4.2vmin 1vmin;
 }
 
-header .row .col-md-5 img {
+.section-0 .row .col-md-5 img {
     height: auto;
     width: auto;
     max-height: 80%;
@@ -131,7 +134,7 @@ header .row .col-md-5 img {
 
 /** Social Media links*/
 
-header .smbox {
+.smbox {
     box-sizing: border-box;
     position: relative;
     display: inline-flex;
@@ -152,7 +155,7 @@ header .smbox {
     z-index: -1;
     height: 200px;
     width: 190px;
-    background: var(--azur);
+    background: var(--calmgreen);
     transition: transform 700ms ease-in-out;
     transform: scaleX(0);
     transform-origin: left;
@@ -197,15 +200,9 @@ header .smbox {
     margin-left: 15px;
 }
 
-.fa-facebook:hover {
-    background: linear-gradient(45deg, #fbeee6, #ffe5d8, #ffcad4, #f3abb6);
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-}
 
 .fa-github:hover {
-    background: linear-gradient(45deg, #6096fd, #aab6fb, #fb7bbe, #faa7bb);
+    background: black;
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
@@ -219,7 +216,7 @@ header .smbox {
 }
 
 .fa-linkedin:hover {
-    background: linear-gradient(45deg, #56c596, #7be495, #cff4d2);
+    background: #0077b5;
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
@@ -233,22 +230,22 @@ header {
     background: var(--bggradient);
 }
 
-header .container .col-md-7 {
+.section-0 .container .col-md-7 {
     font-family: var(--Poiret-font);
 }
 
-header .container .col-md-7 h6 {
+.section-0 .container .col-md-7 h6 {
     padding: 1vmin;
     letter-spacing: 4px;
 }
 
-header .container .col-md-7 h1 {
+.section-0 .container .col-md-7 h1 {
     font-size: 8.5vmin;
     font-weight: bold;
     padding: 0.1em 0em;
 }
 
-header .container .col-md-7 p {
+.section-0 .container .col-md-7 p {
     padding: 1vmin 5vmin;
     text-align: center;
     word-wrap: break-word;
@@ -261,7 +258,7 @@ header .container .col-md-7 p {
     background: var(--reversebg);
 }
 
-.section-1 .row .col-md-6 .pray img {
+.section-1 .row .col-md-6 .paris img {
     opacity: 0.8;
     width: 80%;
     border-radius: 0.2em;
@@ -350,6 +347,7 @@ footer .column i+i {
 .ml2 {
     font-weight: 900;
     font-size: 3.5em;
+    color: black;
 }
 
 .ml2 .letter {
@@ -359,6 +357,7 @@ footer .column i+i {
 
 .ml10 {
     position: relative;
+    color: black;
     font-weight: 700;
     font-size: 1em;
     word-spacing: 6px;
