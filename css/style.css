@@ -11,7 +11,7 @@
     --Lobster: "lobster", cursive;
     --Roboto: "Roboto", cursive;
     --light-black: #2e2c2caf;
-    --bggradient: linear-gradient(45DEG, #ffcce7, #81b7d2, #4d5198);
+    --bggradient: linear-gradient(45DEG, #ffcce7, #81b7d2, #ffcce7, #81b7d2, #ffcce7);
     --reversebg: linear-gradient(45DEG, #4d5198, #81b7d2, #ffcce7);
     --calmgreen: linear-gradient(45DEG, #f6eeab, #c9dd94, #9dcf94, #7ec796, #5ebd96, #11a797);
     --light-gray: rgba(255, 255, 255, 0.877);
@@ -230,6 +230,10 @@ header {
     background: var(--bggradient);
 }
 
+.section-0 .container {
+    min-height: 100%;
+}
+
 .section-0 .container .col-md-7 {
     font-family: var(--Poiret-font);
 }
@@ -296,6 +300,10 @@ header {
 
 .section-2 {
     background: var(--bggradient);
+}
+
+.section-2 .card {
+    width: 100%;
 }
 
 /* Section 2 END*/
