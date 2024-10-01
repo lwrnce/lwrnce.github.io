@@ -16,6 +16,7 @@
     --reversebg: linear-gradient(45DEG, #4d5198, #81b7d2, #ffcce7);
     --flaming: linear-gradient(45DEG, #a10100, #da1f05, #f33c04, #fe650d, #ffc11f, #fff75d, #ffc11f, #fe650d, #fff75d, #a10100);
     --light-gray: rgba(255, 255, 255, 0.877);
+    --light-blue: linear-gradient(45DEG, #7ad7f0, #b7e9f7, #92dff3, #dbf3fa, #f5fcff, #7ad7f0);
     --azur: linear-gradient(to right, #44d3c9, #3d70cf, #3636b9);
     --smboxgradient: linear-gradient(45deg, #ffcce7, #ffecf2, #fb7bbe, #faa7bb, #ffcce7);
 }
@@ -59,7 +60,8 @@ header .navbar-brand {
     padding-right: 1em;
 }
 
-header .nav-link:hover {
+header .navbar-brand:hover,
+.nav-link:hover {
     color: black;
 }
 
@@ -154,8 +156,8 @@ header .nav-link:hover {
     right: 0;
     z-index: -1;
     max-height: 200px;
-    max-width: 300px;
-    background: var(--flaming);
+    max-width: 250px;
+    background: var(--light-blue);
     transition: transform 800ms ease-in-out;
     transform: scaleX(0);
     transform-origin: left;
@@ -170,8 +172,9 @@ header .nav-link:hover {
 .social {
     font-family: var(--Poiret-font);
     font-size: 30px;
-    padding: 0 15px 5px 0px;
     color: var(--light-black);
+    padding: 0 15px 5px 0px;
+    background: transparent;
 }
 
 .sm {
@@ -179,11 +182,6 @@ header .nav-link:hover {
     list-style-type: none;
     padding: 0px 0 5px 12px;
     margin: 0px 25px 0px -25px;
-}
-
-.smbox:hover .social {
-    transition: color 350ms ease-in-out;
-    color: whitesmoke;
 }
 
 .smbox:hover .sm {
@@ -384,15 +382,15 @@ footer .column i+i {
 /** Hover pulse grow */
 @-webkit-keyframes hvr-pulse-grow {
     to {
-        -webkit-transform: scale(1.2);
-        transform: scale(1.2);
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
     }
 }
 
 @keyframes hvr-pulse-grow {
     to {
-        -webkit-transform: scale(1.2);
-        transform: scale(1.2);
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
     }
 }
 
