@@ -11,30 +11,27 @@
     --Lobster: "lobster", cursive;
     --Roboto: "Roboto", cursive;
     --light-black: #2e2c2caf;
-    --bggradient: linear-gradient(45DEG, #ffcce7, #81b7d2, #ffcce7, #81b7d2, #ffcce7);
+    --light-pink: #ffecf2;
+    --bggradient: linear-gradient(45DEG, #ffb6c1, #ffcce7, #fddde6 , #ffcce7, #ffb6c1, #fecdd7, #ffcce7);
     --reversebg: linear-gradient(45DEG, #4d5198, #81b7d2, #ffcce7);
-    --calmgreen: linear-gradient(45DEG, #f6eeab, #c9dd94, #9dcf94, #7ec796, #5ebd96, #11a797);
+    --flaming: linear-gradient(45DEG, #a10100, #da1f05, #f33c04, #fe650d, #ffc11f, #fff75d, #ffc11f, #fe650d, #fff75d, #a10100);
     --light-gray: rgba(255, 255, 255, 0.877);
-    --goldgradient: linear-gradient(to right,
-        #462523 0,
-        #cb9b51 22%,
-        #f6e27a 45%,
-        #f6f2c0 50%,
-        #f6e27a 55%,
-        #cb9b51 78%,
-        #462523 100%);
     --azur: linear-gradient(to right, #44d3c9, #3d70cf, #3636b9);
-    --smboxgradient: linear-gradient(45deg, #6096fd, #aab6fb, #fb7bbe, #faa7bb);
+    --smboxgradient: linear-gradient(45deg, #ffcce7, #ffecf2, #fb7bbe, #faa7bb, #ffcce7);
 }
 
-
+header {
+    background: #dfabd8;
+    /* fallback for old browsers */
+    background: var(--bggradient);
+}
 
 header a {
     font-family: var(--Poiret-font);
     font-size: 1.25em;
     font-weight: bold;
     letter-spacing: 4px;
-    color: whitesmoke;
+    color: white;
 }
 
 .navbar-toggler {
@@ -138,11 +135,14 @@ header .nav-link:hover {
     box-sizing: border-box;
     position: relative;
     display: inline-flex;
-    padding: 10px 0px 0px 18px;
+    padding: 10px 15px 0px 18px;
+    height: fit-content;
     background: var(--smboxgradient);
     border-radius: 40px;
     overflow-x: hidden;
     cursor: pointer;
+    z-index: 1;
+
 }
 
 .smbox::before {
@@ -153,10 +153,10 @@ header .nav-link:hover {
     bottom: 0;
     right: 0;
     z-index: -1;
-    height: 200px;
-    width: 190px;
-    background: var(--calmgreen);
-    transition: transform 700ms ease-in-out;
+    max-height: 200px;
+    max-width: 300px;
+    background: var(--flaming);
+    transition: transform 800ms ease-in-out;
     transform: scaleX(0);
     transform-origin: left;
 }
@@ -164,17 +164,13 @@ header .nav-link:hover {
 .smbox:hover::before,
 .smbox:focus::before {
     transform: scaleX(2);
-}
-
-.smbox {
-    z-index: 1;
-    overflow: hidden;
+    max-height: 200px;
 }
 
 .social {
     font-family: var(--Poiret-font);
     font-size: 30px;
-    padding: 0 15px 0 0;
+    padding: 0 15px 5px 0px;
     color: var(--light-black);
 }
 
@@ -193,11 +189,11 @@ header .nav-link:hover {
 .smbox:hover .sm {
     display: inline-flex;
     position: relative;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .smlink {
-    margin-left: 15px;
+    padding-left: 1.5rem;
 }
 
 
@@ -220,15 +216,12 @@ header .nav-link:hover {
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+    border: 2px solid white;
 }
 
 /**Social Media links*/
 
-header {
-    background: #dfabd8;
-    /* fallback for old browsers */
-    background: var(--bggradient);
-}
+
 
 .section-0 .container {
     min-height: 100%;
@@ -259,7 +252,7 @@ header {
 
 .section-1 {
     padding: 20vmin 0vmin;
-    background: var(--reversebg);
+    background: var(--bggradient);
 }
 
 .section-1 .row .col-md-6 .paris img {
@@ -303,7 +296,7 @@ header {
 }
 
 .section-2 .card {
-    width: 100%;
+    width: 65%;
 }
 
 /* Section 2 END*/
@@ -311,7 +304,8 @@ header {
 footer {
     background: rgba(0, 0, 0, 0.815);
     overflow-x: hidden;
-    padding: 14vmin 18vmin;
+    padding: 1rem;
+    width: 100%;
 }
 
 footer p>span {
